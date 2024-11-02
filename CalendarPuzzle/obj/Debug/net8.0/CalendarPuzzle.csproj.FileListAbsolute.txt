@@ -1,0 +1,14 @@
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\bin\Debug\net8.0\CalendarPuzzle.exe
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\bin\Debug\net8.0\CalendarPuzzle.deps.json
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\bin\Debug\net8.0\CalendarPuzzle.runtimeconfig.json
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\bin\Debug\net8.0\CalendarPuzzle.dll
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\bin\Debug\net8.0\CalendarPuzzle.pdb
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\obj\Debug\net8.0\CalendarPuzzle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\obj\Debug\net8.0\CalendarPuzzle.AssemblyInfoInputs.cache
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\obj\Debug\net8.0\CalendarPuzzle.AssemblyInfo.cs
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\obj\Debug\net8.0\CalendarPuzzle.csproj.CoreCompileInputs.cache
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\obj\Debug\net8.0\CalendarPuzzle.dll
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\obj\Debug\net8.0\refint\CalendarPuzzle.dll
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\obj\Debug\net8.0\CalendarPuzzle.pdb
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\obj\Debug\net8.0\CalendarPuzzle.genruntimeconfig.cache
+C:\Users\ElijahSouthman\Desktop\CalendarPuzzle\CalendarPuzzle\obj\Debug\net8.0\ref\CalendarPuzzle.dll
