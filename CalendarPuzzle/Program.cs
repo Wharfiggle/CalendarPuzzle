@@ -184,12 +184,16 @@ public class Program
 
     public static Board solution;
 
+
     //recursive brute force algorithm
-    //iterates through every uniquie rotation of each piece and attempts to place them at every possible location
+    //iterates through every unique rotation of each piece and attempts to place them at every possible location
     //if a piece is successfully placed, move on to the next piece and repeat until a piece cannot be placed
     //continue until all pieces are successfully placed
-    public static void Solve(Board board, int pieceNum)
+    public static void Solve(Board board, int threadNum, int pieceNum = 0)
     {
+        if(solved)
+            return;
+
         if(pieceNum >= pieces.Count())
         {
             solved = true;
@@ -197,7 +201,7 @@ public class Program
             return;
         }
 
-        PuzzlePiece piece = pieces[pieceNum];
+        PuzzlePiece piece = pieces[(pieceNum + threadNum) % pieces.Count()];
         for(int rind = 0; rind < piece.rotations.GetLength(0) && !solved; rind++)
         {
             for(int x = -(int)piece.leftMost[rind]; x < board.slotValues.GetLength(0) - piece.rightMost[rind] && !solved; x++)
@@ -207,7 +211,7 @@ public class Program
                     Board newBoard = new Board(board.slotValues);
                     bool success = newBoard.PlacePiece(piece, rind, new Vector2(x, y));
                     if(success)
-                        Solve(newBoard, pieceNum + 1);
+                        Solve(newBoard, threadNum, pieceNum + 1);
                 }
             }
         }
@@ -276,7 +280,17 @@ public class Program
 
 
             //start processing to find a solution
-            Solve(board, 0);
+            List<Thread> threads = new List<Thread>();
+            for(int i = 0; i < pieces.Count(); i++)
+            {
+                Thread thread = new Thread(() => Solve(board, i));
+                threads.Add(thread);
+                thread.Start();
+            }
+
+            foreach(Thread t in threads)
+                t.Join();
+
 
             if(solved)
             {

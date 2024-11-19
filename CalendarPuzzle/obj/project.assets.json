@@ -8,24 +8,31 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\derpy\\.nuget\\packages\\": {}
+    "C:\\Users\\ElijahSouthman\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\derpy\\Documents\\GitHub\\CalendarPuzzle\\CalendarPuzzle\\CalendarPuzzle.csproj",
+      "projectUniqueName": "C:\\Users\\ElijahSouthman\\Documents\\GitHub\\CalendarPuzzle\\CalendarPuzzle\\CalendarPuzzle.csproj",
       "projectName": "CalendarPuzzle",
-      "projectPath": "C:\\Users\\derpy\\Documents\\GitHub\\CalendarPuzzle\\CalendarPuzzle\\CalendarPuzzle.csproj",
-      "packagesPath": "C:\\Users\\derpy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\derpy\\Documents\\GitHub\\CalendarPuzzle\\CalendarPuzzle\\obj\\",
+      "projectPath": "C:\\Users\\ElijahSouthman\\Documents\\GitHub\\CalendarPuzzle\\CalendarPuzzle\\CalendarPuzzle.csproj",
+      "packagesPath": "C:\\Users\\ElijahSouthman\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ElijahSouthman\\Documents\\GitHub\\CalendarPuzzle\\CalendarPuzzle\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\derpy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ElijahSouthman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -64,7 +71,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
