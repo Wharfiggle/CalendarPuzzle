@@ -144,7 +144,7 @@ public class Program
         {
             for(int i = 0; i < slotValues.GetLength(0) * 4 + 1; i++)
             {
-                Console.Write("=");
+                Console.Write("_");
             }
             Console.WriteLine();
             for(int y = 0; y < slotValues.GetLength(1); y++)
@@ -180,13 +180,13 @@ public class Program
                         if(connectVert[i] != -1)
                             Console.Write("   ");
                         else
-                            Console.Write("===");
+                            Console.Write("___");
                         if(i < connectVert.Count() - 1)
                         {
                             if(slotValues[i, y] != slotValues[i + 1, y])
                                 Console.Write("|");
                             else if(connectVert[i] == -1 || connectVert[i + 1] == -1)
-                                Console.Write("=");
+                                Console.Write("_");
                             else if(connectVert[i] != -1 && connectVert[i + 1] != -1)
                                 Console.Write(" ");
                             else
@@ -198,10 +198,18 @@ public class Program
                 }
                 else
                 {
-                    for(int i = 0; i < slotValues.GetLength(0) * 4 + 1; i++)
+                    Console.Write("|");
+                    for(int i = 0; i < slotValues.GetLength(0) - 1; i++)
                     {
-                        Console.Write("=");
+                        Console.Write("___");
+                        if(slotValues[i, y] != slotValues[i + 1, y])
+                            Console.Write("|");
+                        else if(slotValues[i, y] == -1 && slotValues[i + 1, y] == -1)
+                            Console.Write("|");
+                        else
+                            Console.Write("_");
                     }
+                    Console.Write("___|");
                 }
                 Console.WriteLine();
             }

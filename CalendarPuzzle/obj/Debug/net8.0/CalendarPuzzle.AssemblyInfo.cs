@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CalendarPuzzle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcd419c43a6bcbef0c92d3b72fac7627f1aa3757")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cdf19eed8464098e1810b9bbd693e0f62b1ea6f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("CalendarPuzzle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CalendarPuzzle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
