@@ -144,24 +144,64 @@ public class Program
         {
             for(int i = 0; i < slotValues.GetLength(0) * 4 + 1; i++)
             {
-                Console.Write("-");
+                Console.Write("=");
             }
             Console.WriteLine();
             for(int y = 0; y < slotValues.GetLength(1); y++)
             {
+                int[] connectVert = new int[slotValues.GetLength(0)];
                 Console.Write("|");
                 for(int x = 0; x < slotValues.GetLength(0); x++)
                 {
-                    String str = slotValues[x, y] != -1 ? pieces[slotValues[x, y]].repStr : boardSlots[y, x];
-                    Console.Write(str);
-                    for(int i = 0; i < 3 - str.Length; i++)
+                    int current = slotValues[x, y];
+                    int bottom = y < slotValues.GetLength(1) - 1 ? slotValues[x, y + 1] : -1;
+                    int right = x < slotValues.GetLength(0) - 1 ? slotValues[x + 1, y] : -1;
+
+                    //String str = current != -1 ? pieces[current].repStr : boardSlots[y, x];
+                    String str = current != -1 ? "   " : boardSlots[y, x];
+                    double halfRem = (3 - str.Length) / 2.0;
+                    for(int i = 0; i < (int)halfRem; i++)
                         Console.Write(" ");
-                    Console.Write("|");
+                    Console.Write(str);
+                    for(int i = 0; i < (int)(halfRem + 0.6); i++)
+                        Console.Write(" ");
+                    if(current != right || right == -1)
+                        Console.Write("|");
+                    else
+                        Console.Write(" ");
+                    connectVert[x] = (current == bottom && bottom != -1) ? current : -1;
                 }
                 Console.WriteLine();
-                for(int i = 0; i < slotValues.GetLength(0) * 4 + 1; i++)
+                if(y < slotValues.GetLength(1) - 1)
                 {
-                    Console.Write("-");
+                    Console.Write("|");
+                    for(int i = 0; i < connectVert.Count(); i++)
+                    {
+                        if(connectVert[i] != -1)
+                            Console.Write("   ");
+                        else
+                            Console.Write("===");
+                        if(i < connectVert.Count() - 1)
+                        {
+                            if(slotValues[i, y] != slotValues[i + 1, y])
+                                Console.Write("|");
+                            else if(connectVert[i] == -1 || connectVert[i + 1] == -1)
+                                Console.Write("=");
+                            else if(connectVert[i] != -1 && connectVert[i + 1] != -1)
+                                Console.Write(" ");
+                            else
+                                Console.Write("|");
+                        }
+                        else
+                            Console.Write("|");
+                    }
+                }
+                else
+                {
+                    for(int i = 0; i < slotValues.GetLength(0) * 4 + 1; i++)
+                    {
+                        Console.Write("=");
+                    }
                 }
                 Console.WriteLine();
             }
